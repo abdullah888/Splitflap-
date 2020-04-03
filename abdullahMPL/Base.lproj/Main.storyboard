@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zdn-sJ-hsZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Mx1-8y-N0V">
+            <objects>
+                <viewController id="zdn-sJ-hsZ" customClass="ViewController" customModule="abdullahMPL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RAo-AT-neG"/>
+                        <viewControllerLayoutGuide type="bottom" id="yc6-gA-tgd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sEF-0C-soy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHO-Go-HNI" customClass="Splitflap" customModule="abdullahMPL" customModuleProvider="target">
+                                <rect key="frame" x="22" y="421.5" width="370" height="53"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="370" id="Whq-zr-kWP"/>
+                                    <constraint firstAttribute="height" constant="53" id="YAK-Io-j4W"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="flapSpacing">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rs3-hQ-NHR">
+                                <rect key="frame" x="100" y="144" width="214" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Ino-ln-nTI"/>
+                                    <constraint firstAttribute="height" constant="45" id="afK-vE-cFE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="ابداء">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="updateSplitFlapAction:" destination="zdn-sJ-hsZ" eventType="touchUpInside" id="xo5-7g-1mV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XHO-Go-HNI" firstAttribute="centerY" secondItem="sEF-0C-soy" secondAttribute="centerY" id="4am-1L-dgr"/>
+                            <constraint firstItem="jKT-FK-YiT" firstAttribute="trailing" secondItem="rs3-hQ-NHR" secondAttribute="trailing" constant="100" id="IO0-de-gcn"/>
+                            <constraint firstItem="rs3-hQ-NHR" firstAttribute="leading" secondItem="jKT-FK-YiT" secondAttribute="leading" constant="100" id="TsA-aU-TYP"/>
+                            <constraint firstItem="XHO-Go-HNI" firstAttribute="centerX" secondItem="sEF-0C-soy" secondAttribute="centerX" id="n72-bn-TRT"/>
+                            <constraint firstItem="rs3-hQ-NHR" firstAttribute="top" secondItem="RAo-AT-neG" secondAttribute="bottom" constant="100" id="zsJ-Oe-NSg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jKT-FK-YiT"/>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="rs3-hQ-NHR" id="Hod-yC-xvf"/>
+                        <outlet property="splitflap" destination="XHO-Go-HNI" id="d8a-of-Bea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dsz-RG-6SY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="508"/>
+        </scene>
+    </scenes>
+</document>
